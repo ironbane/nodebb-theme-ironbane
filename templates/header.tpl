@@ -20,6 +20,7 @@
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
 	</script>
+	<script src="{relative_path}/socket.io/socket.io.js"></script>
 	<script src="{relative_path}/nodebb.min.js?{script-buster}"></script>
 	<script>
 		require.config({
@@ -49,6 +50,8 @@
 			<!-- IMPORT partials/menu.tpl -->
 		</div>
 	</div>
+
+	<input id="csrf_token" type="hidden" template-variable="csrf" value="{csrf}" />
 
 	<div class="container" id="content">
 	<!-- IMPORT partials/noscript/warning.tpl -->

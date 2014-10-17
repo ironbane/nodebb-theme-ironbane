@@ -1,0 +1,158 @@
+
+@topbarHeight: 50px;
+
+.composer {
+	.no-select;
+
+	position: fixed;
+	bottom: 0px;
+
+	right: 0px;
+	width: 100%;
+	height: 50%;
+
+	background: rgb(224, 224, 224);
+	background: rgba(224, 224, 224, 0.95);
+	visibility: hidden;
+
+	.composer-container {
+		min-height: 50px;
+	}
+
+	input.title {
+		width: 95%;
+		margin: 1em auto 0 auto;
+		display: block;
+		font-size: 14px;
+		.border-radius(5px);
+		padding: 0 1em;
+	}
+
+	.tags-container {
+		width:95%;
+		margin: 1em auto 0 auto;
+		.bootstrap-tagsinput {
+			width:100%;
+		}
+	}
+
+	.write-preview-container {
+		height:100%;
+		margin: 0 2.5%;
+		padding-bottom: 10px;
+		>div {
+			height:100%;
+		}
+	}
+
+	.write-container {
+		padding-left:0px;
+	}
+	.preview-container {
+		padding-right:0px;
+	}
+
+	.write, .preview  {
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		font-size: 14px;
+		.border-radius(5px);
+		resize:none;
+		overflow: auto;
+	}
+
+	.preview {
+		overflow-y: auto;
+	}
+
+	.formatting-bar {
+		margin: 5px 2.5%;
+
+		span {
+			color: lighten(@brand-primary, 20%);
+		}
+		span:hover {
+			background-color: lighten(@brand-primary, 20%);
+			color: darken(@brand-primary, 40%);
+		}
+	}
+
+	.resizer {
+		position: absolute;
+		width: 100%;
+		top: 10px;
+		.pointer;
+
+		.trigger {
+			position: relative;
+			display: block;
+			height: 10px;
+			width: 50px;
+			top: -15px;
+			margin: 0 auto;
+
+			background: #efefef;
+			border: 1px solid #999;
+			.border-radius(5px);
+
+			i {
+				position:relative;
+				top:-9px;
+				font-size: 11px;
+				color: #666;
+			}
+		}
+	}
+
+	.imagedrop {
+		position: absolute;
+		top: 250px;
+		text-align: center;
+		font-size: 24px;
+		color: #999;
+		width: 100%;
+		display: none;
+	}
+
+  .topic-thumb-container {
+    width: 95%;
+    margin-top: 5px;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+  }
+
+  .topic-thumb-btn {
+    cursor: hand;
+    cursor: pointer;
+  }
+
+  .topic-thumb-toggle-btn {
+    margin: -25px 3% 0 0;
+  }
+
+  .topic-thumb-preview {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px
+  }
+
+  .topic-thumb-ctrl.form-group {
+    display: inline-block;
+    vertical-align: -50% !important;
+  }
+}
+
+@media (max-width: 767px) {
+	.composer {
+		width: 100%;
+		background: rgba(224, 224, 224, 1);
+	}
+
+	.resizer {
+		visibility: hidden;
+	}
+}

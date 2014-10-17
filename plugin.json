@@ -1,16 +1,27 @@
 {
-	"id": "nodebb-theme-lavender",
+	"id": "nodebb-theme-ironbane",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
-			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
+		},
+		{
+			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
+		},
+		{
+			"hook": "filter:widget.render:news", "method": "renderNews"
 		}
 	],
 	"staticDirs": {
+		"images": "static/images",
 		"vendor": "static/vendor"
 	},
 	"scripts": [
 		"static/lib/lavender.js",
+		"static/lib/randombg.js",
 		"static/vendor/masonry.js",
 		"static/vendor/imagesLoaded.js"
 	]

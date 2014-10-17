@@ -23,9 +23,9 @@
 
 									<small>
 									<!-- IF topics.user.userslug -->
-										[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, {topics.user.username}]]
+										[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}">{topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, {topics.user.username}]]
 									<!-- ELSE -->
-										[[global:posted_in_ago_by_guest, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
+										[[global:posted_in_ago_by_guest, <a href="{relative_path}/category/{topics.category.slug}">{topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
 									<!-- ENDIF topics.user.userslug -->
 									<br/>
 									<!-- IMPORT partials/category_tags.tpl -->

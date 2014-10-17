@@ -7,39 +7,24 @@
 
 				<div class="category-icon">
 
-					<!-- IF categories.link -->
-					<a style="color: {categories.color};" href="{categories.link}" itemprop="url" target="_blank">
-					<!-- ELSE -->
-					<a style="color: {categories.color};" href="{relative_path}/category/{categories.slug}" itemprop="url">
-					<!-- ENDIF categories.link -->
-						<div
-							id="category-{categories.cid}" class="category-header category-header-image-{categories.imageClass}"
-							style="
+
+					<div class="category-box" >
+						<div class="category-info" style="
 								<!-- IF categories.backgroundImage -->background-image: url({categories.backgroundImage});<!-- ENDIF categories.backgroundImage -->
-								<!-- IF categories.bgColor -->background-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
-								color: {categories.color};
-							"
-						>
-							<!-- IF !categories.link -->
-							<span class="badge {categories.unread-class}"><i class="fa fa-book" data-toggle="tooltip" title="[[global:topics]]"></i> <span class="human-readable-number" title="{categories.topic_count}">{categories.topic_count}</span>&nbsp; <i class="fa fa-pencil" data-toggle="tooltip" title="[[global:posts]]"></i> <span class="human-readable-number" title="{categories.post_count}">{categories.post_count}</span></span>
-							<!-- ENDIF !categories.link -->
+							">
+								<!-- IF !categories.link -->
+								<span class="badge {categories.unread-class}"><i class="fa fa-book" data-toggle="tooltip" title="[[global:topics]]"></i> <span class="human-readable-number" title="{categories.topic_count}">{categories.topic_count}</span>&nbsp; <i class="fa fa-pencil" data-toggle="tooltip" title="[[global:posts]]"></i> <span class="human-readable-number" title="{categories.post_count}">{categories.post_count}</span></span>
+								<!-- ENDIF !categories.link -->
+								<!-- IF categories.link -->
+								<a href="{categories.link}" itemprop="url" target="_blank">
+								<!-- ELSE -->
+								<a href="{relative_path}/category/{categories.slug}" itemprop="url">
+								<!-- ENDIF categories.link-->
+									<h4><!-- IF categories.icon --><i class="fa {categories.icon} visible-xs-inline"></i> <!-- ENDIF categories.icon -->{categories.name}</h4>
+								</a>
+								<div class="description" itemprop="description">{categories.description}</div>
 
-							<!-- IF categories.icon -->
-							<div><i class="fa {categories.icon} fa-4x"></i></div>
-							<!-- ENDIF categories.icon -->
-						</div>
-					</a>
 
-					<div class="category-box">
-						<div class="category-info">
-							<!-- IF categories.link -->
-							<a href="{categories.link}" itemprop="url" target="_blank">
-							<!-- ELSE -->
-							<a href="{relative_path}/category/{categories.slug}" itemprop="url">
-							<!-- ENDIF categories.link-->
-								<h4><!-- IF categories.icon --><i class="fa {categories.icon} visible-xs-inline"></i> <!-- ENDIF categories.icon -->{categories.name}</h4>
-							</a>
-							<div class="description" itemprop="description">{categories.description}</div>
 						</div>
 						<!-- IF !categories.link -->
 						<!-- BEGIN posts -->
@@ -53,7 +38,6 @@
 								<div class="content">
 								{categories.posts.content}
 								</div>
-								<p class="fade-out"></p>
 							</div>
 							<span class="pull-right footer">
 								<span class="timeago" title="{categories.posts.relativeTime}"></span> &bull;

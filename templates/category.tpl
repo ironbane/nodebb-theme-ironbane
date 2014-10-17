@@ -6,23 +6,17 @@
 
 <ol class="breadcrumb">
 	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="{relative_path}/" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
+		<a href="{relative_path}/forum" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
 	</li>
 	<!-- IF parent -->
 	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="{relative_path}/category/{parent.slug}" itemprop="url"><span itemprop="title">{parent.name}</span></a>
+		<a href="{relative_path}/{parent.slug}" itemprop="url"><span itemprop="title">{parent.name}</span></a>
 	</li>
 	<!-- ENDIF parent -->
 	<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<span itemprop="title">{name} <a target="_blank" href="{relative_path}/category/{cid}.rss"><i class="fa fa-rss-square"></i></a></span>
+		<span itemprop="title">{name}</span>
 	</li>
 </ol>
-
-<div class="subcategories">
-	<!-- BEGIN children -->
-	<!-- IMPORT partials/category_child.tpl -->
-	<!-- END children -->
-</div>
 
 <div class="category row">
 	<div class="{topic_row_size}" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
@@ -32,19 +26,7 @@
 			<!-- ENDIF privileges.topics:create -->
 
 			<span class="pull-right">
-				<!-- IF loggedIn -->
-				<button type="button" class="btn btn-default btn-success watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->"><i class="fa fa-eye"></i> [[topic:watch]]</button>
-				<button type="button" class="btn btn-default btn-warning ignore <!-- IF isIgnored -->hidden<!-- ENDIF isIgnored -->"><i class="fa fa-eye-slash"></i> [[category:ignore]]</button>
-				<!-- ENDIF loggedIn -->
 				<!-- IMPORT partials/category_tools.tpl -->
-
-				<div class="dropdown share-dropdown inline-block">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						[[topic:share]] <span class="caret"></span>
-					</button>
-
-					<!-- IMPORT partials/share_dropdown.tpl -->
-				</div>
 			</span>
 		</div>
 
@@ -127,8 +109,6 @@
 	</div>
 
 	<div widget-area="sidebar" class="col-md-3 col-xs-12 category-sidebar"></div>
-
-	<span class="hidden" id="csrf" data-csrf="{csrf}"></span>
 </div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
