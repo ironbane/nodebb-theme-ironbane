@@ -12,6 +12,9 @@
 			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
 		},
 		{
+			"hook": "filter:widget.render:newsletter", "method": "renderNewsletter"
+		},
+		{
 			"hook": "filter:widget.render:news", "method": "renderNews"
 		}
 	],

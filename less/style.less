@@ -546,11 +546,12 @@ body {
 }
 
 .composer {
+	border-top: 1px solid @brand-primary;
 	.instructions {
 		line-height: 25px;
 
 	}
-	background-color: spin(@brand-primary, 10%);
+	background-color: darken(@brand-primary, 25%);
 }
 
 .textcomplete-wrapper {
@@ -615,7 +616,7 @@ textarea {
 }
 
 .modal-body {
-	color: darken(@brand-primary, 10%);
+	// color: darken(@brand-primary, 10%);
 }
 
 .bootstrap-tagsinput {
@@ -638,6 +639,13 @@ textarea {
 	h2 {
 		font-size: 20px;
 	}
+	h3 {
+		margin-top: 0px;
+		color: #aef7e6;
+	}
+	p {
+		font-size: 15px;
+	}
 }
 
 .jumbotron--centered {
@@ -648,4 +656,11 @@ textarea {
 .jumbotron--news {
 	.jumbotron;
 	padding-left: 30px;
+	padding-right: 30px;
 }
+
+// Recaptcha
+.recaptchatable {
+	border: 0 !important;
+}
+

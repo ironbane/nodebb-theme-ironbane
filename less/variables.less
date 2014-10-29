@@ -19,6 +19,8 @@
 // -------------------------
 
 @brand-primary:			#239ea5;
+@brand-secondary:       #585105;
+@brand-tertiary:        #c5b50c;
 @brand-success:         spin(@brand-primary, -10);
 @brand-warning:         spin(@brand-primary, -15);
 @brand-danger:          spin(@brand-primary, -20);
@@ -119,13 +121,13 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              lighten(@brand-primary, 10%);
-@btn-default-bg:                 darken(@brand-primary, 20%);
-@btn-default-border:             transparent;
+@btn-primary-color:              lighten(@brand-primary, 25%);
+@btn-primary-bg:                 darken(@brand-primary, 5%);
+@btn-primary-border:             @btn-primary-bg;
 
-@btn-primary-color:              white;
-@btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             transparent;
+@btn-default-color:              desaturate(@btn-primary-color, 50%);
+@btn-default-bg:                 desaturate(@btn-primary-bg, 50%);
+@btn-default-border:             desaturate(@btn-primary-border, 50%);
 
 @btn-success-color:              @btn-primary-color;
 @btn-success-bg:                 @brand-success;
@@ -149,15 +151,15 @@
 // Forms
 // -------------------------
 
-@input-bg:                       darken(@brand-primary, 20%);
+@input-bg:                       @brand-secondary;
 @input-bg-disabled:              transparent;
 
-@input-color:                    lighten(@brand-primary, 30%);
-@input-border:                   transparent;
+@input-color:                    @brand-tertiary;
+@input-border:                   darken(@brand-tertiary, 15%);
 @input-border-radius:            @border-radius-base;
-@input-border-focus:             @brand-primary;
+@input-border-focus:             @brand-tertiary;
 
-@input-color-placeholder:        @gray-lighter;
+@input-color-placeholder:        lighten(@brand-secondary, 10%);
 
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
 @input-height-large:             (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
@@ -166,8 +168,8 @@
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
 
-@input-group-addon-bg:           @gray-lighter;
-@input-group-addon-border-color: @input-border;
+@input-group-addon-bg:           @input-bg;
+@input-group-addon-border-color: darken(@brand-tertiary, 15%);
 
 
 // Dropdowns
@@ -453,7 +455,7 @@
 @modal-title-padding:         15px;
 @modal-title-line-height:     @line-height-base;
 
-@modal-content-bg:                             lighten(@brand-primary, 40%);
+@modal-content-bg:                             darken(@brand-primary, 15%);
 @modal-content-border-color:                   rgba(0,0,0,.2);
 @modal-content-fallback-border-color:          #999;
 
@@ -514,7 +516,7 @@
 
 // Panels
 // -------------------------
-@panel-bg:                    darken(@brand-primary, 5%);
+@panel-bg:                    darken(@brand-primary, 15%);
 @panel-inner-border:          transparent;
 @panel-border-radius:         @border-radius-base;
 @panel-footer-bg:             darken(@brand-primary, 30%);

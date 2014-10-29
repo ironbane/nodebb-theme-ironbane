@@ -16,7 +16,7 @@ $(function () {
 
 		data.topics.forEach(function (topic) {
 			if (!topic.deleted) {
-				var date = new Date(parseInt(topic.lastposttime, 10));
+				var date = new Date(parseInt(topic.timestamp, 10));
 				var currentDate = date.getDate();
 				var currentMonth = date.getMonth();
 				var currentYear = date.getFullYear();
@@ -27,8 +27,6 @@ $(function () {
 				html += '<div class="col-xs-9">';
 				html += '<a href="/topic/' + topic.slug + '">' + topic.title + '</a>';
 				html += '</div>';
-
-
 			}
 		});
 
