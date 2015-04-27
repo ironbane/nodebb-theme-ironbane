@@ -1,7 +1,8 @@
 {
-    "id": "nodebb-theme-lavender",
-    "name": "Lavender Theme for NodeBB",
-    "description": "A simple theme for NodeBB. Check out the theming guide that accompanies this work at http://burnaftercompiling.com",
-    "url": "https://www.github.com/psychobunny/nodebb-theme-lavender",
-    "screenshot": "screenshot.png"
+    "id": "nodebb-theme-ironbane",
+    "name": "Ironbane Theme for NodeBB",
+    "description": "Ironbane Theme for NodeBB",
+    "url": "https://github.com/ironbane/nodebb-theme-ironbane",
+    "screenshot": "screenshot.png",
+    "templates": "templates"
 }

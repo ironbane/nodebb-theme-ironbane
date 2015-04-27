@@ -1,25 +1,24 @@
 {
-  "name": "nodebb-theme-lavender",
-  "version": "1.0.38",
-  "description": "Lavender Theme for NodeBB",
+  "name": "nodebb-theme-ironbane",
+  "version": "0.2.0",
+  "description": "Ironbane Theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-lavender"
+    "url": "https://github.com/ironbane/nodebb-theme-ironbane"
   },
   "keywords": [
     "nodebb",
-    "lavender",
+    "ironbane",
     "theme",
     "themes"
   ],
   "author": {
-    "name": "psychobunny",
-    "email": "psycho.bunny@hotmail.com"
+    "name": "Nick Janssen",
+    "email": "info@nickjanssen.com"
   },
-  "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-lavender/issues"
+    "url": "https://github.com/ironbane/nodebb-theme-ironbane/issues"
   },
   "peerDependencies": {
     "nodebb-theme-vanilla": "^1.0.0"
