@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-ironbane",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Ironbane Theme for NodeBB",
   "main": "theme.less",
   "repository": {
